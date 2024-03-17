@@ -119,7 +119,6 @@ public class ClientManager implements Runnable {
             e.printStackTrace();
         }
     }
-
     private void removeClient(){
         clients.remove(this);
         System.out.println(name + " покинул чат.");

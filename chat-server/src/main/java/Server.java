@@ -3,7 +3,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-
     private final ServerSocket serverSocket;
 
     public Server(ServerSocket serverSocket) {
@@ -15,7 +14,6 @@ public class Server {
      * в контексте метода run. Затем цикл повторяется, начиная с прослушивания основного потока.
      * В случае появления исключений, вызывается метод закрытия серверного сокета.
      */
-
     public void runServer(){
         try {
             while (!serverSocket.isClosed()) {
@@ -30,8 +28,7 @@ public class Server {
             closeSocket();
         }
     }
-
-    // Метод закрытия
+    /* Метод закрытия Socket*/
     private void closeSocket(){
         try{
             if (serverSocket != null) serverSocket.close();
